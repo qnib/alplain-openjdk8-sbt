@@ -2,6 +2,7 @@ ARG DOCKER_REGISTRY=docker.io
 FROM ${DOCKER_REGISTRY}/qnib/alplain-openjdk8
 
 ARG SBT_VER=1.0.0
+ENV sbt_version ${SBT_VER}
 LABEL sbt.version=${SBT_VER}
 ENV SBT_HOME=/usr/local/sbt
 ENV PATH ${PATH}:${SBT_HOME}/bin
